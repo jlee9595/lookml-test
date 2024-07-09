@@ -1,8 +1,8 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: External Semantic Layer Upload
+run-name: ${{ github.actor }} is uploading an external semantic layer 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  External-Semantic-Layer-Upload:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -15,5 +15,5 @@ jobs:
       run: |
         curl -X POST \
           -F "data=@repo.zip" \
-          http://localhost:6060/api/v1/semantic-layer \
+          https://dev-app-antelope/api/v1/semantic-layer \
           -H "Authorization: Bearer 5c4347df071e05be856350325d59a3966013ebd7a6bb70752e43b7e07c904abf689c798465c31798458b969344f5597f"
