@@ -1,0 +1,19 @@
+name: External Semantic Layer Upload
+run-name: ${{ github.actor }} is uploading an external semantic layer 🚀
+on: [push]
+jobs:
+  External-Semantic-Layer-Upload:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Archive repository
+      run: git archive -o repo.zip HEAD
+
+    - name: Send archive via curl
+      run: |
+        curl -X POST \
+          -F "data=@repo.zip" \
+          https://dev-app-antelope.hex.tech/api/v1/semantic-layer \
+          -H "Authorization: Bearer 39ea27e4fc7dcb4a878d2671859b698361fa9581c3491a2f354600de9494687b4a18300014c4a486ed61c94a157b7692"
