@@ -15,5 +15,5 @@ jobs:
       run: |
         curl -X POST \
           -F "data=@repo.zip" \
-          https://dev-app-antelope/api/v1/semantic-layer \
+          https://dev-app-antelope.hex.tech/api/v1/semantic-layer \
           -H "Authorization: Bearer 5c4347df071e05be856350325d59a3966013ebd7a6bb70752e43b7e07c904abf689c798465c31798458b969344f5597f"
