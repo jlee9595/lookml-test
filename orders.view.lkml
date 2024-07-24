@@ -18,7 +18,7 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
   measure: count {             # field: orders.count
-    type: count                # Creates a sql COUNT(*)
+    type: count                # creates a sql COUNT(*)
     drill_fields: [drill_set*] # list of fields to show when someone clicks 'ORDERS Count'
   }
   measure: total_amount {
