@@ -16,7 +16,7 @@ jobs:
         response=$(curl -o /dev/null -s -w "%{http_code}" -X POST \
           -F "data=@repo.zip" \
           https://dev-app-antelope.hex.tech/api/v1/semantic-layer \
-          -H "Authorization: Bearer 39ea27e4fc7dcb4a878d2671859b698361fa9581c3491a2f354600de9494687b4a18300014c4a486ed61c94a157b7692")
+          -H "Authorization: Bearer d773ff0d5f1fea8c396cb2a3956ec9af56a675fbe0307038c244886f7683297a8d32df5ef4d95fee3907e41d61f63212")
         if [ "$response" -ne 201 ]; then
           echo "Server responded with code $response"
           exit 1
