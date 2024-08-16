@@ -4,7 +4,7 @@ view: orders {
     type: number
     sql: ${TABLE}.id ;;
   }
-  dimension: customer_id {      # field: orders.customer_id
+  dimension: customer_id {      # fiEld: orders.customer_id
     sql: ${TABLE}.customer_id ;;
   }
   dimension: amount {           # field: orders.amount
